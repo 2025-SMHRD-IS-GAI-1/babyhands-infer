@@ -126,7 +126,7 @@ async def get_learned_only():
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
-    print("✅ 클라이언트 연결됨")
+    print("클라이언트 연결됨")
     
     # 모델이 로드되지 않았을 경우 경고
     if not model_loader.is_loaded():
@@ -227,4 +227,4 @@ def convert_to_korean(prediction: str) -> str:
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000, reload=False, factory=False)
+    uvicorn.run(app, host="0.0.0.0", port=8010, reload=False, factory=False)

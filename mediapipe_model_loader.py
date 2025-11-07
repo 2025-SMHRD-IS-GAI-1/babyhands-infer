@@ -53,8 +53,8 @@ class MediaPipeModelLoader:
         try:
             self.load_model()
         except Exception as e:
-            print(f"⚠️ 모델 로드 실패 - MediaPipe는 사용 가능하지만 LSTM 모델 없음: {e}")
-            print("💡 MediaPipe만으로도 hand landmarks 추출은 가능합니다.")
+            print(f" 모델 로드 실패 - MediaPipe는 사용 가능하지만 LSTM 모델 없음: {e}")
+            print(" MediaPipe만으로도 hand landmarks 추출은 가능합니다.")
             self._loaded = False
     
     def _load_classes(self) -> List[str]:
@@ -95,7 +95,7 @@ class MediaPipeModelLoader:
         self.output_details = self.interpreter.get_output_details()
         
         self._loaded = True
-        print(f"✅ LSTM 모델 로드 완료: {self.model_path}")
+        print(f" LSTM 모델 로드 완료: {self.model_path}")
         print(f"   클래스 수: {len(self.classes)}")
         return True
     

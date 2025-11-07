@@ -33,11 +33,11 @@ class SignLanguagePredictor:
         self.vowel_classes = []
         self._categorize_classes()
         
-        print(f"✅ MediaPipe + LSTM 모델 초기화 완료")
+        print(f" MediaPipe + LSTM 모델 초기화 완료")
         print(f"   - 전체 클래스 수: {len(self.classes)}개 (31개 자음/모음)")
         print(f"   - 자음: {len(self.consonant_classes)}개")
         print(f"   - 모음: {len(self.vowel_classes)}개")
-        print(f"   - LSTM 모델 로드: {'✅' if model_loader.is_loaded() else '❌ (MediaPipe만 사용)'}")
+        print(f"   - LSTM 모델 로드: {'(LSTM 사용)' if model_loader.is_loaded() else '(MediaPipe만 사용)'}")
     
     def _categorize_classes(self):
         """클래스를 자음/모음으로 분류"""
